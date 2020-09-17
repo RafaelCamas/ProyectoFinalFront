@@ -1,0 +1,31 @@
+.fondo-form {
+  background-image: url('../../../assets/images/piano.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.error {
+  color: red;
+}
+
+.campos {
+  background-color: rgba(61, 56, 56, 0.658);
+}
+
+#title {
+  padding: 20px;
+  display: flexbox;
+  text-align: center;
+}
+
+.custom-file-input:lang(en)~.custom-file-label::after {
+  content: "Buscar";
+}
+
+#nombre {
+  margin-bottom: 10px;
+}
+
+#archivo {
+  margin-top: 12px;
+}

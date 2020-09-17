@@ -1,0 +1,22 @@
+<div class="whole">
+  <div class="header">
+    <img [src]="usuario.fotoPerfil" class="profilePic">
+    <h2 class="userName">
+      Bienvenid@ {{usuario.nombreUsuario}}
+      <hr> Añade grupos y busca nuevas amistades a través de la
+      música.
+    </h2>
+  </div>
+  <h2 class="grupos">Grupos que me gustan</h2>
+  <hr>
+  <section class="container">
+    <div class="row" *ngIf="this.arrBands.length !== 0">
+      <div class="col-12 col-md-6 col-lg-3 mb-2" *ngFor="let band of arrBands">
+        <div class="card">
+          <img [src]="band.bandPic" id="bandImg">
+          <h5 class="bandName">{{band.nameBand}}</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,50 @@
+.whole {
+  background-image: url('../../../assets/images/vinyl_strike-1680x1050.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  color: black;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "profilePic userName";
+}
+
+.userName {
+  margin-top: 50px;
+  margin-left: 70px;
+  width: 1000px;
+}
+
+.grupos {
+  margin-left: 25px;
+}
+
+.profilePic {
+  display: flex;
+  flex-direction: row;
+  border: thick black;
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+#bandImg {
+  height: 250px;
+}
+
+.card {
+  background-color: transparent;
+  color: white;
+}
+
+.bandName {
+  margin-top: 10px;
+}
