@@ -8,7 +8,6 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BandFormComponent } from './components/bandForm/bandForm.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { from } from 'rxjs';
 import { LoginComponent } from './components/login/login.component';
 
 @NgModule({

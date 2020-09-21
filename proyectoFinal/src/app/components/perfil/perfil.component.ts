@@ -10,15 +10,28 @@ import { ServicioService } from 'src/app/services/servicio.service';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  usuario: Usuario;
-  arrBands: Band[];
+  usuarios: Usuario;
+  arrBands: any;
   constructor(
     private servicioService: ServicioService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.usuario = this.servicioService.getuserById(1);
-    this.arrBands = this.servicioService.getAllBands();
+    this.usuarios = this.servicioService.getUserById(1);
+    this.getAllBands();
+  }
+
+  async getAllBands(): Promise<void> {
+    const bandList = await this.servicioService.getAllBands();
+    console.log('Band list', bandList);
+    this.arrBands = bandList;
+  }
+
+  async deleteBand(pBand): Promise<any> {
+    const result = await this.servicioService.deleteBand(pBand);
+  }
+  async modifyBand(): Promise<any> {
+    // const result = await this.servicioService.modifyBand();
   }
 }

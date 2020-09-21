@@ -1,20 +1,28 @@
 <div class="whole">
   <div class="header">
-    <img [src]="usuario.fotoPerfil" class="profilePic">
-    <h2 class="userName">
-      Bienvenid@ {{usuario.nombreUsuario}}
+    <img [src]="usuarios.fotoPerfil" class="profilePic">
+    <h3 class="userName">
+      Bienvenid@ {{usuarios.userName}}
       <hr> Añade grupos y busca nuevas amistades a través de la
-      música.
-    </h2>
+      música. <br>
+      <button type="button" class="btn btn-success btn-lg" style="margin-top: 15px;">Encontrar perfiles</button>
+    </h3>
+
   </div>
   <h2 class="grupos">Grupos que me gustan</h2>
   <hr>
   <section class="container">
-    <div class="row" *ngIf="this.arrBands.length !== 0">
+    <div class="row" *ngIf="this.arrBands">
       <div class="col-12 col-md-6 col-lg-3 mb-2" *ngFor="let band of arrBands">
         <div class="card">
-          <img [src]="band.bandPic" id="bandImg">
-          <h5 class="bandName">{{band.nameBand}}</h5>
+          <img [src]="band.img" id="bandImg">
+          <h5 class="bandName">{{band.name}}</h5>
+          <h6 class="bandGenre">{{band.genre}}</h6>
+          <button type="button" class="btn btn-primary btn-sm" style="margin-bottom: 10px;"
+            (click)="modifyBand()">Modificar
+            banda</button>
+          <button type="button" class="btn btn-danger btn-sm" style="margin-top: 10px;" (click)="deleteBand()">Eliminar
+            banda</button>
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 export class Usuario {
   id: number;
-  nombreUsuario: string;
+  userName: string;
   fotoPerfil: string;
   likedBands: any[];
-  constructor(pId, pNombreUsuario, pFotoPerfil, pLikedBands) {
+  constructor(pId, pUserName, pFotoPerfil, pLikedBands) {
     this.id = pId;
-    this.nombreUsuario = pNombreUsuario;
+    this.userName = pUserName;
     this.fotoPerfil = pFotoPerfil;
     this.likedBands = pLikedBands;
   }

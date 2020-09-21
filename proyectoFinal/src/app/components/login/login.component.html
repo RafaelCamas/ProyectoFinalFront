@@ -1,1 +1,40 @@
-<p>login works!</p>
+<div class="whole">
+  <form novalidate [formGroup]="login" (ngSubmit)="verify()" class="elements">
+    <img [src]="usuario.fotoPerfil" class="profilePic"
+      style="width: 250px; height: 200px; border-radius: 50%; margin-left: 100px;">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Tu correo</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+        formControlName="correo">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Tu contraseña</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Ingresar</button>
+    <div class="registro" style="margin-top: 20px;">
+      <p>¿No estás registrado? <button (click)="goToRegister()" type="button" class="btn btn-primary btn-sm"
+          style="margin-left: 10px;">Puedes
+          hacerlo
+          aquí</button></p>
+    </div>
+  </form>
+
+</div>
+<!-- <div class="whole">
+  <div class="main-container">
+    <form novalidate [formGroup]="login" (ngSubmit)="verify()" class="elements">
+      <img [src]="usuario.fotoPerfil" class="profilePic">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Tu correo</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          formControlName="correo">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Tu contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+      </div>
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+    </form>
+  </div>
+</div> -->

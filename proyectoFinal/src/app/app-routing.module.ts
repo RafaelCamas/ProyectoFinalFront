@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { BandFormComponent } from './components/bandForm/bandForm.component';
-import { from } from 'rxjs';
+import { LoginComponent } from './components/login/login.component';
+import { AllguardGuard } from './guards/allguard.guard';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'profile' },
-  { path: 'profile', component: PerfilComponent },
-  { path: 'login', component: FormularioComponent },
-  { path: 'new', component: BandFormComponent },
+  { path: 'profile', component: PerfilComponent, canActivate: [AllguardGuard] },
+  { path: 'register', component: FormularioComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'new', component: BandFormComponent, canActivate: [AllguardGuard] },
   { path: '**', redirectTo: 'profile' },
 ];
 

@@ -1,0 +1,24 @@
+.whole {
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.RrubuCwZxgWADggZBfYn6wHaE7%26pid%3DApi&f=1');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+  padding-bottom: 100px;
+}
+
+.main-container {
+  height: 1000px;
+}
+
+.elements {
+  width: 500px;
+  margin-left: 400px;
+  padding: 30px;
+  color: white;
+  background-color: rgba(92, 98, 104, 0.678);
+}

@@ -3,16 +3,21 @@
     <div class="title">
       <h2>Aquí puedes añadir cualquier grupo o artista que quieras añadir a tu perfil</h2>
     </div>
-    <form>
+    <form [formGroup]="band" (ngSubmit)="collectBandData(band)" class="newBand">
       <div class="form-group">
         <label for="formGroupExampleInput">Nombre del artista/as</label>
         <input type="text" class="form-control" id="formGroupExampleInput"
-          placeholder="Intenta que sea lo más exacto posible.">
+          placeholder="Intenta que sea lo más exacto posible." formControlName="bandName">
       </div>
+      <p class="error" *ngIf="band.controls.bandName.errors?.required && band.controls.bandName.touched">Campo
+        obligatorio</p>
       <div class="form-group">
         <label for="formGroupExampleInput2">Añade tu imagen favorita del grupo/artista</label>
-        <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Tu imagen">
+        <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Tu imagen"
+          formControlName="img">
       </div>
+      <p class="error" *ngIf="band.controls.img.errors?.required && band.controls.img.touched">Campo
+        obligatorio</p>
       <div class="form-group">
         <label for="exampleFormControlSelect1">Selecciona el género musical</label>
         <select class="form-control" id="exampleFormControlSelect1">

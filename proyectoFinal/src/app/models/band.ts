@@ -1,10 +1,12 @@
 export class Band {
   id: number;
-  nameBand: string;
-  bandPic: string;
-  constructor(pId, pNameBand, pBandPic) {
+  name: string;
+  img: string;
+  genre: string;
+  constructor(pId, pName, pImg, pGenre) {
     this.id = pId;
-    this.nameBand = pNameBand;
-    this.bandPic = pBandPic;
+    this.name = pName;
+    this.img = pImg;
+    this.genre = pGenre;
   }
 }

@@ -7,6 +7,7 @@ import {
   Validators,
   MinLengthValidator,
 } from '@angular/forms';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-formulario',
@@ -33,9 +34,11 @@ export class FormularioComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-  async collectData() {
-    const result = this.servicioService.addUser(this.form.value);
+  async collectData(): Promise<any> {
+    const result = await this.servicioService.addUser(this.form.value);
     localStorage.setItem('token', result.token);
     localStorage.setItem('userId', result.userId);
+    this.router.navigate(['/login']);
+    return;
   }
 }
